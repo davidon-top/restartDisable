@@ -1,0 +1,28 @@
+name: RestartQueue
+version: '${project.version}'
+main: the.david.restartqueue.Restartqueue
+api-version: 1.19
+prefix: RQ
+authors: [ itIsMeDavid ]
+description: add levers to be turned off before restart
+#TODO before release change permissions
+commands:
+  rq:
+    description: Add a lever to restart queue
+    usage: Correct usage /<command> add/remove/location/list <name>
+#    permission: restartqueue.useQueue
+  rqoff:
+    description: Turns off all the levers
+    usage: Correct usage /<command>
+    permission: restartqueue.forceQueue
+  rqon:
+    description: Turns levers back on if they were off
+    usage: Correct usage /<command>
+    permission: restartqueue.forceQueue
+  rqhelp:
+    description: Help command for all rq (restart queue) commands
+    usage: Correct usage /<command>
+  rqa:
+    description: Admin command, list playrs levers, tp to player levers etc.
+    usage: Correct usage /<command> player <name> or /<command> tp <player-name> <lever-name>
+    permission: restartqueue.admin
